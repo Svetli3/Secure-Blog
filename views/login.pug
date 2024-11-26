@@ -1,0 +1,41 @@
+extends layout 
+
+block variables
+  //-username comes from res.render() on the server, USERNAME is the name of the variable in the pug, USERNAME is also
+  //-defined in a script so it can be used in the js files
+  - var LOGGED_IN = logged_in
+  script.
+    //https://pugjs.org/language/interpolation.html
+    var LOGGED_IN = "#{LOGGED_IN}";
+
+block header 
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/login.css')
+
+block content 
+  #root
+    h1 Login to Your Account 
+
+    form(action="/users/login", method="post")
+      input(type="hidden" name="csrfToken" value=csrfToken)
+      .login 
+        .inputs
+          label(for="username" id="text") Username  
+          input(type="text" id="username" name="username" value=username required='')
+        
+          label(for="password" id="text") Password  
+          input(type="password" id="password" name="password" value=password required='')
+          //- button#loginButton(type='button' name='Login' placeholder='Login') Login 
+
+          #loginSignUpBtnContainer
+            button#loginButton Login
+            a(style=('margin-top: 30px;') href='/users/signup')
+              button#signUpButton(type='button' name='Sign up' placeholder='Sign up') Sign Up
+
+        
+          p(style='color: red')= error1
+
+       
+        
+    

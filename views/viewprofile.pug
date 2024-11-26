@@ -1,0 +1,21 @@
+extends layout 
+
+block variables
+
+block header
+    title= title 
+    script(src='/javascripts/viewprofile.js', defer)
+    link(rel='stylesheet', href='/stylesheets/viewprofile.css')
+    
+
+block content 
+    h1(style="text-align: center") Profile 
+    #userPostsContainer
+        #postButtonsContainer
+            a(href="/posts/createpost")
+                button#addPostButton
+                    span Add Post 
+
+        
+        #userPosts
+    

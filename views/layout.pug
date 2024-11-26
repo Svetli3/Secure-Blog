@@ -1,0 +1,58 @@
+doctype html
+
+block variables
+
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Work+Sans:wght@100&display=swap")
+    link(rel="icon" type="image/x-icon" href="/images/favicon.ico")
+    script(src='/javascripts/layout.js', defer)
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block header
+
+  body
+    header#header
+        a(href="/")
+          img.logo(src="/images/camel-logo.png", width="200", height="150")
+        //- div.homeIconContainer
+        //-   a(href="/")
+        //-     img.homeIcon(src="images/home.jpg",width="200",height="150")
+        
+        div#searchBar
+          input(type='search' id='search' name='search' placeholder='Search for posts...')
+          button#searchButton
+            svg(viewBox='0 0 1024 1024')
+              path(d='M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z')
+        
+        if LOGGED_IN
+          div#profilePicSignOutBtnContainer
+            a(href="/users/viewprofile" style='margin-right: 25px;')
+              img#userProfilePicture(src=`/images/profile_pics/p${profilepicid}.jpg`)
+            a(href="/users/logout")
+              button#SignInButton(type='button' name='Sign Out' placeholder='Sign Out')
+                span.text Sign Out
+        else
+          a(href="/users/login")
+            button#SignInButton(type='button' name='Sign In' placeholder='Sign In')
+              span.text Sign In
+    
+    //- a(href='/') Home 
+    //- br
+    //- a(href='/login') login
+    //- br
+    //- a(href='/viewprofile') viewprofile
+    //- br
+    //- a(href='/editpost') editpost
+    //- br
+    //- a(href='/createpost') createpost 
+    //- br
+    //- a(href='/signup') signup
+    block content
+    
+    footer
+      p(style="margin-right: 1%") Copyright 2024
+  

@@ -1,0 +1,25 @@
+extends layout
+
+block variables
+  //-username comes from res.render() on the server, USERNAME is the name of the variable in the pug, USERNAME is also
+  //-defined in a script so it can be used in the js files
+  - var LOGGED_IN = logged_in
+  script.  
+    var LOGGED_IN = "#{LOGGED_IN}";
+
+block header 
+  head
+    link(rel='stylesheet', href='/stylesheets/index.css') 
+    script(src='/javascripts/index.js', defer)
+
+block content
+  h1(style="text-align: center") Home Page
+  #HomePagePost 
+    
+    //- .userpost 
+    //-   .usernameProfilePictureContainer
+    //-     img.profilePicture(src="images/profilePicture.jpg" id="profilePicture" height="50" width="50")
+    //-     p.username Username
+    //-   .postContent 
+    //-     img(src="images/postPicture.jpg" id="postPicture" height="250" width="400")
+    //-     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat orci in justo venenatis, id venenatis purus rutrum. Nam at turpis quis nunc efficitur molestie nec sit amet quam. Duis in turpis pellentesque, pretium magna vel, ornare nulla. Duis efficitur efficitur eros, id vehicula massa interdum id. Nulla lobortis magna at diam consectetur tempor.

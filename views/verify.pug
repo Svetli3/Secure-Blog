@@ -1,0 +1,27 @@
+extends layout 
+
+block variables
+  //-username comes from res.render() on the server, USERNAME is the name of the variable in the pug, USERNAME is also
+  //-defined in a script so it can be used in the js files
+  
+  - var LOGGED_IN = logged_in
+  script.
+    //https://pugjs.org/language/interpolation.html
+    var LOGGED_IN = "#{LOGGED_IN}";
+
+block header 
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/verifyview.css')
+    script(src='/javascripts/verify.js', defer)
+
+//-reference https://stackoverflow.com/questions/71074523/maxlength-for-input-type-number
+block content 
+      form#verificationInputContainer(action="/users/verifyCode", method="post")
+        input(type="hidden" name="csrfToken" value=csrfToken)
+        h1 Please Check your email for the authentication code
+
+        input(oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number"
+        maxlength="4" id="verificationInput" name="verificationInput" value=verificationInput placeholder="XXXX")
+        button#submitButton(type='submit' name='Submit' placeholder='Submit') 
+            span Submit

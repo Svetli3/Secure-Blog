@@ -1,0 +1,27 @@
+extends layout 
+
+block variables
+  //-username comes from res.render() on the server, USERNAME is the name of the variable in the pug, USERNAME is also
+  //-defined in a script so it can be used in the js files
+  - var LOGGED_IN = logged_in
+  script.
+    //https://pugjs.org/language/interpolation.html
+    var LOGGED_IN = "#{LOGGED_IN}";
+
+block header 
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/createpost.css')
+    script(src='/javascripts/edit.js', defer)
+
+block content
+  h1(style="text-align: center") Edit Post Page 
+    form(style='margin: 0px auto 0 auto;' action=`/posts/editpost/${postid}`, method="post" enctype="multipart/form-data")#createPost
+      input(type="hidden" name="csrfToken" value=csrfToken)
+      img#post(src="/images/postPicture.jpg"  height="200" width="500")
+      p(style='color: red;')= warning_message
+      input#file(type="file" name="image" accept="image/*" value=image)
+      textarea#posttext(name="posttext", cols="65", rows="10" value=posttext form="createPost")=posttext 
+      button#submitpost
+        span.text Edit Post 
+  

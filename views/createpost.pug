@@ -1,0 +1,24 @@
+extends layout 
+
+block variables
+
+block header 
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/createpost.css')
+    script(src='/javascripts/createpost.js', defer)
+
+block content
+  h1(style="text-align: center") Create Post Page 
+  form(action="/posts/createPost", method="post" enctype="multipart/form-data")
+    input(type="hidden" name="csrfToken" value=csrfToken)
+    div#createPost
+      img#post(src="/images/postPicture.jpg" height="200" width="500")
+      label(for="file" id="text") Add a picture
+      p(style='color: red;')= warning_message
+      input#file(type="file" name="image" accept="image/*" value=image)
+      textarea#text(name="text", cols="65", rows="10" value=text required='') 
+      button(type="submit")#submitpost
+        span.text Submit
+
+      
