@@ -1,0 +1,83 @@
+.sticky + #verificationInputContainer{
+  padding-top: 100px;
+}
+
+#verificationInput{
+    font-size: 64px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#submitButton {
+    align-items: center;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: center;
+    letter-spacing: .4px;
+    line-height: 1;
+    max-width: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+    /* <weight>: Use a value from 100 to 900 */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 64px;
+    
+    margin-top: 100px;
+  }
+  #submitButton:active {
+    outline: 0;
+  }
+  
+  #submitButton:hover {
+    outline: 0;
+  }
+  
+  #submitButton span {
+    transition: all 200ms;
+  }
+  
+  #submitButton:hover span {
+    transform: scale(.9);
+    opacity: .75;
+  }
+
+  #verificationInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  h1{
+    font-size: 64px;
+  }

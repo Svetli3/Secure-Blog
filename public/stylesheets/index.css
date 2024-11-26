@@ -1,0 +1,120 @@
+#SignInButton {
+  align-items: center;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  /* <weight>: Use a value from 100 to 900 */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 24px;
+
+  margin-right: 12px;
+}
+#SignInButton:active {
+  outline: 0;
+}
+
+#SignInButton:hover {
+  outline: 0;
+}
+
+#SignInButton span {
+  transition: all 200ms;
+}
+
+#SignInButton:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+#HomePagePost{
+  /* height: 100%;
+  width: 15%;
+  margin-top: 15%;
+  margin-left: 40%;
+  background-color: beige; */
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+  width: 75vw;
+  /* background-color: beige; */
+}
+
+.userpost{
+  background-color: beige;
+  border-radius: 36px;
+  margin: 30px 0;
+  
+  -webkit-box-shadow: 1px 3px 18px -1px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 1px 3px 18px -1px rgba(66, 68, 90, 1);
+  box-shadow: 1px 3px 18px -1px rgba(66, 68, 90, 1);
+}
+
+.usernameProfilePictureContainer{
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  margin-bottom: 0.5%;
+  border: 3px #3b444b solid;
+  border-radius: 36px 36px 0 0;
+  margin: 0;
+}
+
+.usernameProfilePictureContainer img{
+  border-radius: 36px;
+
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.usernameProfilePictureContainer p{
+  margin-left: 10px;
+}
+
+.postContent{
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  border: 2px black solid;
+
+  -webkit-box-shadow: inset 0px 0px 7px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 0px 7px 0px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 0px 7px 0px rgba(66, 68, 90, 1);
+  border-radius: 0 0 36px 36px;
+  word-wrap: break-word;
+}
+
+.postContent img{
+  max-width: 100%;
+  max-height: 100%;
+  width: 350px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+

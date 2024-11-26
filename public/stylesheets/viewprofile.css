@@ -1,0 +1,209 @@
+header
+{
+  justify-content: unset;
+}
+
+#searchBar
+{
+  position: relative;
+  left: 7.75%;
+}
+
+#userPostsContainer
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky + #userPostsContainer 
+{
+  padding-top: 1000px;
+}
+
+.homeIconContainer{
+  width: 82.5%;
+  text-align: center;
+}
+
+#postButtonsContainer
+{
+  margin: 20px auto 50px;
+}
+
+#addPostButton
+{
+  align-items: center;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  /* <weight>: Use a value from 100 to 900 */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 24px;
+}
+#addPostButton:active {
+  outline: 0;
+}
+
+#addPostButton:hover {
+  outline: 0;
+}
+
+#addPostButton span {
+  transition: all 200ms;
+}
+
+#addPostButton:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+#editPostButton
+{
+  max-width: 300px;
+  height: 50px;
+  font-size: 24px;
+}
+
+
+#deletePostButton
+{
+  max-width: 300px;
+  height: 50px;
+  font-size: 24px;
+}
+
+#userPosts
+{
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+}
+
+.postContainer
+{
+  /* flex: 1 0 21%; */
+  padding: 1%;
+  
+}
+
+.dateContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 0.5%;
+  border: 3px #3b444b solid;
+  border-radius: 36px 36px 0 0;
+  margin: 0;
+  
+  background-color: hsl(36, 100%, 76%);
+  font-weight: 600;
+}
+
+.postButtonOptions
+{
+  display: flex;
+}
+
+.deletePostButton
+{
+  border: 0;
+  background: 0; 
+  border-radius: 100px;
+}
+
+.deletePostBtnImg
+{
+  width: 30px;
+  transition: transform .2s;
+}
+.deletePostBtnImg:hover
+{
+  transform: scale(1.5);
+}
+
+.editPostButton
+{
+  border: 0;
+  background: 0; 
+  border-radius: 100px;
+}
+
+.editPostBtnImg
+{
+  border-radius: 100px;
+  width: 30px;
+  transition: transform .2s;
+}
+.editPostBtnImg:hover
+{
+  transform: scale(1.5);
+}
+
+.postContent{
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border: 2px black solid;
+
+  -webkit-box-shadow: inset 0px 0px 7px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: inset 0px 0px 7px 0px rgba(66, 68, 90, 1);
+  box-shadow: inset 0px 0px 7px 0px rgba(66, 68, 90, 1);
+  border-radius: 0 0 36px 36px;
+  word-wrap: break-word;
+}
+
+.postContent img{
+  max-width: 100%;
+  max-height: 100%;
+  width: 350px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.545) 0px 5px 15px;
+}
+
+.postText
+{
+  border-radius: 24px;
+  padding-left: 10px;
+  resize: none;
+}
+
+@media (max-width: 800px) 
+{
+  #userPosts
+  {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+  }
+}

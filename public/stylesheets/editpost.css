@@ -1,0 +1,43 @@
+header
+{
+  justify-content: unset;
+}
+
+.homeIconContainer{
+  width: 82.5%;
+  text-align: center;
+}
+/* 
+createPost{
+    height: 650px;
+    width: 22%;
+    margin-top: 15%;
+    margin-left: 37%;
+    background-color: beige;
+  } */
+  #post{
+    display: block;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: auto
+  }
+  #file{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+  #text{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    max-width: 95%;
+  }
+  #submitpost{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    font-size: 54px;
+  }

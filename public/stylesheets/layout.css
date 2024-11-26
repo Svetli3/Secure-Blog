@@ -1,0 +1,161 @@
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: 	#fff0db;
+  /* <weight>: Use a value from 100 to 900 */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+a {
+  text-decoration: none;
+  color: #00B7FF;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+header
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: lightblue; */
+  /* background: rgb(34,193,195);
+  background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(173,216,255,1) 100%); */
+  background-color: 	#d9b99b;
+  width: 100%;
+  height: 150px;
+  z-index: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + #HomePagePost {
+  padding-top: 300px;
+}
+
+#searchBar
+{
+  background-color: #EFE0B9;
+  border: 2px solid black;
+  width: 60%;
+  height: 50px;
+  min-width: 100px;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-right: 20px;
+}
+
+#searchBar input 
+{
+  all: unset;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  color: black;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+#searchBar input::placeholder
+{
+  color: black;
+  opacity: 0.7;
+}
+
+#searchButton
+{
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+#searchButton svg
+{
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 11px 0;
+  transition: color .2s;
+}
+#searchButton svg:hover
+{
+  color: black;
+}
+
+#profilePicSignOutBtnContainer
+{
+  display: flex;
+  align-items: center;
+}
+
+#userProfilePicture
+{
+  max-width: 50px;
+  margin-top: 3.5px;
+  /* margin-right: 50px;
+  margin-left: 30px; */
+  align-self: center;
+
+  border-radius: 36px;
+  border: 1px solid black;
+  transition: transform .2s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#userProfilePicture:hover
+{
+  transform: scale(1.5);
+}
+
+.homeIcon{
+  display: block;
+  margin: 0 auto;
+}
+.logo{
+  display: block;
+}
+
+footer{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+  /* background-color: lightblue; */
+  font-weight: bold;
+  /* background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(173,216,255,1) 100%); */
+  background-color: 	#d9b99b;
+}
+
+@media (max-width: 600px) 
+{
+  #searchBar input::placeholder
+  {
+    opacity: 0;
+  }  
+}
+
+
+
